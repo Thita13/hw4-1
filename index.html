@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบบันทึกค่าใช้จ่าย</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>บันทึกค่าใช้จ่าย</h1>
+
+    <!-- ฟอร์มสำหรับกรอก -->
+    <form id="expense-form">
+        <input type="text" id="title" placeholder="รายการ" required>
+        <input type="number" id="amount" placeholder="จำนวนเงิน" required>
+        <select id="category">
+            <option value="food">อาหาร</option>
+            <option value="transport">การเดินทาง</option>
+            <option value="entertainment">บันเทิง</option>
+            <option value="rent">ค่าหอ</option>
+            <option value="water bill">ค่าน้ำ</option>
+            <option value="electricity bill">ค่าไฟ</option>
+            <option value="other">อื่น ๆ</option>
+        </select>
+        <input type="date" id="date" required>
+        <button type="submit">เพิ่มรายการ</button>
+    </form>
+
+    <!-- แสดงผลรายการ -->
+    <h2>รายการค่าใช้จ่าย</h2>
+    <ul id="expense-list"></ul>
+    <p id="no-expenses" style="display:none;">ยังไม่มีรายการค่าใช้จ่าย</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
